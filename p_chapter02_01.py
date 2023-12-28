@@ -51,3 +51,6 @@ print(car1.__dict__)
 
 car_list = []
 car_list.append(car1)
+
+for x in car_list:
+    print(repr(x))
