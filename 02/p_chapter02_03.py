@@ -37,6 +37,13 @@ class Car(object):
     def raise_price(cls, per):
         cls.price_per_raise = per
 
+    # static method vs class method ??, 필요성에 약간 논쟁이있음
+    @staticmethod
+    def is_bmw(instance):
+        if instance._company == "bmw":
+            return "ok"
+        return "nop"
+
 
 car1 = Car("fer", {"color": "white", "price": 1000})
 car2 = Car("bmw", {"color": "white", "price": 2000})
@@ -53,3 +60,7 @@ print(car1.get_price_culc)
 print(car1.get_price())
 Car.raise_price(1.6)
 print(car1.get_price_culc)
+
+# static method
+print(car1.is_bmw(car1))
+print(Car.is_bmw(car1))
