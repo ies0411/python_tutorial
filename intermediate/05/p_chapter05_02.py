@@ -23,7 +23,7 @@ c = 30
 
 
 def func_v3(a):
-    global c
+    global c #비추
     print(c)
     c = 40
     print(a)
@@ -65,3 +65,5 @@ print(dir(averager_cls))
 print(averager_cls(10))
 print(averager_cls(30))
 print(averager_cls(50))
+
+
