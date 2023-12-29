@@ -25,3 +25,42 @@ print(avg_closure1(50))
 print(dir(avg_closure1))
 print(avg_closure1.__code__)
 print(avg_closure1.__code__.co_freevars)
+print(avg_closure1.__closure__[0].cell_contents)
+
+
+# 잘못된 closure
+def closure_ex2():
+    # free variable
+    cnt = 0
+    total = 0
+
+    def averager(v):
+        cnt += 1
+        total += v
+        return total / cnt
+
+    return averager
+
+
+avg_closure2 = closure_ex2()
+avg_closure2(10)
+
+
+def closure_ex3():
+    # free variable
+    cnt = 0
+    total = 0
+
+    def averager(v):
+        nonlocal cnt, total
+        cnt += 1
+        total += v
+        return total / cnt
+
+    return averager
+
+
+avg_closure3 = closure_ex3()
+avg_closure3(10)
+avg_closure3(120)
+avg_closure3(30)
