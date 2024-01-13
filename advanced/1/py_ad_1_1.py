@@ -96,3 +96,6 @@ for i in range(1, 10):
 print(globals())
 print(plus_5_5)
 print(plus_9_9)
+# 전역변수는 고정값에 사용
+# 지역변수 : 소멸주기 - 함수 실행 해제시
+# 전역변수는 지역내에서 수정안하는것을 권장
