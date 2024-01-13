@@ -95,3 +95,4 @@ for i in range(1, 10):
         globals()["plus_{}_{}".format(i, k)] = i + k
 print(globals())
 print(plus_5_5)
+print(plus_9_9)
