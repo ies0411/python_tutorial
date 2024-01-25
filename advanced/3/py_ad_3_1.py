@@ -21,3 +21,22 @@ print(obj1.__class__)
 print(type(obj1))
 print(obj1.__class__ is type(obj1))  # true
 print(obj1.__class__.__class__)  # type
+# obj1 -> sampleA instance
+# sampleA -> type meta class
+# type -> type meta class
+
+# ex2
+
+# int,dict
+n = 10
+d = {"a": 10, "b": 20}
+
+
+class SampleB:
+    pass
+
+
+obj2 = SampleB()
+
+for o in (n, d, obj2):
+    print(type(o), type(o) is o.__class__, o.__class__.__class__)
