@@ -37,4 +37,4 @@ class GifConverter:
 
 if __name__ == "__main__":
     c = GifConverter()
-    c.convert_gif
+    c.convert_gif()
